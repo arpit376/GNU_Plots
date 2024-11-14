@@ -2,14 +2,14 @@
 # Reset session and set up variables
 reset session
 
-FILES     = 'traditional_filtered made_filtered'
+FILES     = 'trad_mem made_mem'
 File(n)   = sprintf("%s.tsv", word(FILES, n))
 myXtic(n) = sprintf("%s", word(FILES, n))
 
 #set title "CPU Consumption Percentage" font "Helvetica-Bold,20"
 set xlabel "Apps" font "Helvetica-Bold,45"
-set ylabel "CPU Consumption Percentage" font "Helvetica-Bold,45"
-set yrange [0:100]
+set ylabel "Memory Usage(in MB)" font "Helvetica-Bold,45"
+set yrange [4:14]
 #set xrange [-1:10]
 set grid y
 set key noautotitle
@@ -18,8 +18,7 @@ set style fill pattern 3
 set key font "Helvetica-Bold,45"
 set style boxplot nooutliers
 #set border 1
-set key top 
-set key horizontal 
+set key horizontal
 
 set bmargin at screen 0.1
 set lmargin at screen 0.07
